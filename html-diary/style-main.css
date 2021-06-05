@@ -1,0 +1,169 @@
+:root {
+  --background: #2c4547;
+  --background-dark: #0c1622;
+  --title-col: #de891d;
+  --subtitle-col: #eabd3a;
+  --text-col: white;
+  --standout: #416866;
+}
+
+body {
+  margin: 0px !important;
+  padding: 0px !important;
+  box-sizing: border-box;
+  font-family: 'Work Sans', 'Cardo', serif;
+  background-color: var(--background);
+	background-image: url("images/background.jpg");
+	background-attachment: fixed;
+	background-position: center;
+  color: var(--text-col);
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Oswald', sans-serif;
+ text-transform: uppercase;
+ color: #de891d;
+}
+
+p.subtitles {
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: var(--subtitle-col);
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 85vh; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.right {
+  margin-left: 10%;
+  width: 100%;
+}
+
+.summary-values {
+  margin-left: 20%;
+  margin-right: auto;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.column-summary {
+  float: left;
+}
+
+.summary-col {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.myBox {
+  border: none;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--subtitle-col);
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #88ba1c;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.grid-container {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: auto;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(1, 1, 1, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  padding: 10px;
+  text-align: left;
+  transition: 1s;
+  border-radius: 8px;
+  box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+}
+.grid-item:hover {
+  color: var(--title-col);
+  box-shadow: 0px 0px transparent;
+  border: 1px solid var(--title-col);
+}
+
+p.grid-date {
+  font-size: 12px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  background-color: transparent;
+}
+p.grid-meta {
+  font-size: 16px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  background-color: transparent;
+}
+
+a.standout-number {
+  display: inline-block;
+  width: 105px;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: right;
+}
+a.standout {
+  font-size: 32px;
+  margin-left: 15px;
+}
+
+
+
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+

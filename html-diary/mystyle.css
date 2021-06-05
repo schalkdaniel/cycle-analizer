@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', 'Cardo', serif;
+  background-color: #674b7c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Oswald', sans-serif;
+ text-transform: uppercase;
+ color: #f47362;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 85vh; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 350px;
+  border-right: 1px solid black;
+}
+
+.right {
+  margin-left: 10%;
+  width: auto;
+  overflow: hidden;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.myBox {
+  border: none;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: gold;
+}
+
+::-webkit-scrollbar-thumb {
+  background: yellowgreen;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #88ba1c;
+}
+
+::-webkit-scrollbar-corner {
+  background: gold;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  text-align: left;
+  transition: 1s;
+}
+.grid-item:hover {
+  background-color: red;
+}
+
+p.grid-date {
+  font-size: 12px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  background-color: transparent;
+}
+p.grid-meta {
+  font-size: 16px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  background-color: transparent;
+}
+
+.fly1 {
+  animation-duration: 1s;
+  animation: 1s ease-out 0s 1 slidein;
+}
+.fly2 {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation: 1s ease-out 1s 1 slidein;
+}
+
+@keyframes slidein {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0%); }
+}
+
+
+
+
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
