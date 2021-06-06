@@ -4,6 +4,10 @@ source("R/data-processor.R")
 source("R/widget-processor.R")
 source("R/site-processor.R")
 source("R/figures.R")
+source("R/ggcalendar.R")
+
+gg = calendarHeatmap(as.Date(smr$date), smr$km)
+ggplotly(gg)
 
 updateSummary()
 updatePowerCurves()
@@ -12,6 +16,8 @@ if (FALSE) file.remove(summary_file)
 summary_file = "data/summary.Rda"
 load(summary_file)
 smr = smr[order(smr$date), ]
+
+
 
 # Create html subsite menu:
 html_sub_dir = "html-diary/sub-sites/"
